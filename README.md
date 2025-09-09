@@ -1,31 +1,27 @@
 ![](assets/full-logo.png)
 
-**A replica, near real-time, miniature UK railway station train departure sign based upon a Raspberry Pi Zero and 256x64 SPI OLED display(s). Uses the publicly available [OpenLDBWS API by National Rail Enquiries](https://www.nationalrail.co.uk/).**
+**A real-time, miniature weather display based upon a Raspberry Pi / Zero and 256x64 SPI OLED display. Uses the publicly available [OpenWeatherMap One Call API](https://openweathermap.org/api/one-call-api). This project was MASSIVELY inspired by [chrisys](https://github.com/chrisys)'s [Train Departure Display](https://github.com/chrisys/train-departure-display) project **
 
 ## Highlights
 
-- **See local departures**: Display the depatures from your local station at home for up to date train information.
-- **3D-printable cases**: Print your own miniature case to keep everything tidy - both desktop and 'hanging' style available.
-- **Dual display support**: Run two displays each showing departures from different platforms from a single Raspberry Pi.
+- **See local weather**: Display the current weather and forecast for your location. And on your commute.
+- **Highly configurable**: Customize many aspects of the display including which weather attributes you want to see.
+- **Two locations**: Specify two locations - useful for commuters!
+- **Clear notification for rain**: If rain is forecast in the next 12h, the display shows an umbrella icon for your convenience.
 
-![](assets/blog-header.jpg)
-![](docs/images/completed-unit.jpg)
+<img src="assets/current.jpg" width="480px">
+<img src="assets/forecast.jpg" width="480px">
 
 ## How to build
 
-**Check out [the documentation](/docs/01-getting-started.md) for full hardware/software requirements and complete build guide.**
+**Check out [the documentation](/docs/01-getting-started.md) for full hardware/software requirements and the complete build guide.**
 
 - [Getting Started](/docs/01-getting-started.md)
 - [Connecting the display to the Pi](/docs/02-connecting-the-display-to-the-pi.md)
-- [Assembling the Case](/docs/03-assembling-the-case.md)
-- [Configuration](/docs/04-configuration.md)
+- [Configuration](/docs/03-configuration.md)
 
 ## Credits
 
-A big thanks to [Chris Hutchinson](https://github.com/chrishutchinson/) who originally started this project and inspired me to develop it further. [Blake](https://github.com/ghostseven) made some further improvements and this project was forked from [there](https://github.com/ghostseven/UK-Train-Departure-Display).
+This project is a fork of the excellent [Train Departure Display by chrisys](https://github.com/chrisys/train-departure-display). A big thanks to him and the original contributors for creating the foundation that this project is built upon.
 
-The fonts used were painstakingly put together by `DanielHartUK` and can be found on GitHub at https://github.com/DanielHartUK/Dot-Matrix-Typeface - A huge thanks for making that resource available!
-
-Thanks to [@jajasilver](https://github.com/jajsilver/UK-Train-Departure-Display-NRE) and [@MatthewAscough](https://github.com/MatthewAscough/UK-Train-Departure-Display-NRE) for forming the basis of the OpenLDBWS implementation.
-
-Thanks to [@cr3ative](https://github.com/cr3ative) and [@CalamityJames](https://github.com/CalamityJames) for the huge performance improvements and clean up in v0.5.0.
+The fonts used were painstakingly put together by `DanielHartUK` (and modified by me to include the 'degree' symbol) and can be found on GitHub at https://github.com/DanielHartUK/Dot-Matrix-Typeface - A huge thanks for making that resource available!

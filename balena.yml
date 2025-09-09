@@ -1,40 +1,35 @@
-name: Train Departure Display
+name: Weather Display
 type: sw.application
 description: >-
-  A balenaCloud Raspberry Pi app to display replica near real-time UK railway
-  station departure data on SSD1322 screens.
+  A balenaCloud Raspberry Pi app to display replica near real-time Weather information on SSD1322 screens.
 post-provisioning: >-
-  ![](https://raw.githubusercontent.com/chrisys/train-departure-display/main/assets/full-logo.png)
+  ![](https://github.com/bonstio/weather-display/blob/main/assets/full-logo.png)
 
-  **A replica, near real-time, miniature UK railway station train departure sign based upon a Raspberry Pi Zero and 256x64 SPI OLED display(s). Uses the publicly available [OpenLDBWS API by National Rail Enquiries](https://www.nationalrail.co.uk/).**
+  ****A real-time, miniature weather display based upon a Raspberry Pi / Zero and 256x64 SPI OLED display. Uses the publicly available [OpenWeatherMap One Call API](https://openweathermap.org/api/one-call-api).**
 
   ## Highlights
-
-  - **See local departures**: Display the depatures from your local station at home for up to date train information.
-
-  - **3D-printable cases**: Print your own miniature case to keep everything tidy - both desktop and 'hanging' style available.
-
-  - **Dual display support**: Run two displays each showing departures from different platforms from a single Raspberry Pi.
-
-  ![](https://raw.githubusercontent.com/chrisys/train-departure-display/main/assets/blog-header.jpg)
-  ![](https://raw.githubusercontent.com/chrisys/train-departure-display/main/docs/images/completed-unit.jpg)
+    - **See local weather**: Display the current weather and forecast for your location. And on your commute.
+  
+    - **Highly configurable**: Customize many aspects of the display including which weather attributes you want to see.
+  
+    - **3D-printable cases**: The original 3D-printable cases still work perfectly for this project.
+  
+    - **Clear notification for rain**: If rain is forecast in the next 12h, the display shows an umbrella icon for your convenience.
 
   ## How to build
 
-  **Check out [the documentation](https://github.com/chrisys/train-departure-display/blob/main/docs/01-getting-started.md) for full hardware/software requirements and complete build guide.**
+  **Check out [the documentation](https://github.com/bonstio/weather-display/blob/main/docs/01-getting-started.md) for full hardware/software requirements and complete build guide.**
 
-  - [Getting Started](https://github.com/chrisys/train-departure-display/blob/main/docs/01-getting-started.md)
+  - [Getting Started](https://github.com/bonstio/weather-display/blob/main/docs/01-getting-started.md)
 
-  - [Connecting the display to the Pi](https://github.com/chrisys/train-departure-display/blob/main/docs/02-connecting-the-display-to-the-pi.md)
+  - [Connecting the display to the Pi](https://github.com/bonstio/weather-display/blob/main/docs/02-connecting-the-display-to-the-pi.md)
 
-  - [Assembling the Case](https://github.com/chrisys/train-departure-display/blob/main/docs/03-assembling-the-case.md)
-
-  - [Configuration](https://github.com/chrisys/train-departure-display/blob/main/docs/04-configuration.md)
+  - [Configuration](https://github.com/bonstio/weather-display/blob/main/docs/03-configuration.md)
 
   ## Credits
 
-  A big thanks to [Chris Hutchinson](https://github.com/chrishutchinson/) who originally started this project and inspired me to develop it further. [Blake](https://github.com/ghostseven) made some further improvements and this project was forked from [there](https://github.com/ghostseven/UK-Train-Departure-Display).
-
+  A big thanks to [Chris Crocker-White](https://github.com/chrisys) who originally  this project and inspired me to develop it further.
+  
   The fonts used were painstakingly put together by `DanielHartUK` and can be found on GitHub at https://github.com/DanielHartUK/Dot-Matrix-Typeface - A huge thanks for making that resource available!
 
   Thanks to [@jajasilver](https://github.com/jajsilver/UK-Train-Departure-Display-NRE) and [@MatthewAscough](https://github.com/MatthewAscough/UK-Train-Departure-Display-NRE) for forming the basis of the OpenLDBWS implementation.
@@ -42,12 +37,12 @@ assets:
   repository:
     type: blob.asset
     data:
-      url: 'https://github.com/chrisys/train-departure-display'
+      url: 'https://github.com/bonstio/weather-display'
   logo:
     type: blob.asset
     data:
       url: >-
-        https://raw.githubusercontent.com/chrisys/train-departure-display/master/assets/logo.png
+        https://raw.githubusercontent.com/bonstio/weather-display/master/assets/logo.png
 data:
   defaultDeviceType: raspberry-pi
   supportedDeviceTypes:
@@ -56,23 +51,21 @@ data:
     - raspberrypi3
   applicationEnvironmentVariables:
     - TZ: Europe/London
-    - departureStation: PAD
-    - outOfHoursName: London Paddington
-    - refreshTime: 120
-    - apiKey: UPDATE_ME
+    - openWeatherApiKey: change_me
+    - location: London
+    - otherLocation: Worcester
+    - units: metric
     - operatingHours: 8-22
-    - screenBlankHours: 1-6
-    - screenRotation: 2
-    - dualScreen: False
-    - destinationStation:
-    - timeOffset: 0
-    - screen1Platform:
-    - screen2Platform:
-    - individualStationDepartureTime: False
-    - showDepartureNumbers: False
-    - firstDepartureBold: True
-    - targetFPS: 70
-    - fpsTime: 10
-    - debug: False
-version: 0.6.2
+    - FPS: 40
+    - updateIntervalSeconds: 1800
+    - displayDuration: 0 # Switch after marquee animation
+    - transitionEffect: 'none'
+    - transitionDurationSeconds: 0.2
+    - scrollPauseSeconds: 2
+    - showBrollyIcon: True
+    - weatherSlot1: 'Desc'
+    - weatherSlot2: 'Sun'
+    - weatherSlot3: 'Humidity'
+    - weatherSlot4: 'Last updated'
+version: 0.9.4
 
