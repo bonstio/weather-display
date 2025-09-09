@@ -15,7 +15,7 @@ Some displays have a solder-blob or zero-ohm resistor jumper on the back of the 
 
 The connections for one of these displays to the Raspberry Pi GPIO header are as follows, but **it would be a good idea to check the connections with the datasheet of your particular display before powering on** as there's no guarantee yours will match the pinout of mine.
 
-### Display 1
+### Display
 
 ![](images/display-1-wiring.jpg)
 
@@ -29,17 +29,6 @@ The connections for one of these displays to the Raspberry Pi GPIO header are as
 | 15 | `RST` (reset) | 22 (`BCM25`) |
 | 16 | `CS` (chip select) | 24 (`BCM8 CE0`)
 
-### Display 2 (optional)
-**Note:** when using 2 displays there's [additional configuration required](./04-configuration.md).
-| Display 2 | Connection | Raspberry Pi
-|---|---|---
-| 1 | Ground | 25 (Ground) |
-| 2 | V+ (3.3V) | 17 (3v3 Power) |
-| 4 | `D0/SCLK` | 40 (`BCM21 SCLK`) |
-| 5 | `D1/SDIN` | 38 (`BCM20 MOSI`) |
-| 14 | `DC` (data/command select) | 29 (`BCM5`) |
-| 15 | `RST` (reset) | 31 (`BCM6`) |
-| 16 | `CS` (chip select) | 12 (`BCM18 CE0`)
 
 ## Making the connections
 
@@ -64,4 +53,4 @@ At this point you can install the SD card into the Pi and power it up. If you've
 
 If at this point you're not seeing the Train Departure Display welcome screen, don't worry, just double check all of your connections one by one, and review the note at the beginning of this guide about the resistor/solder-blob configuration. It can be different per-display, and we need to make sure the display is set to 4-wire SPI mode before it will work.
 
-**Next up: [Assembling the case](./03-assembling-the-case.md)**
+**Next up: [Configuration](03-configuration.md)**
