@@ -22,6 +22,17 @@ The hardware for this project remains the same as the original Train Departure D
     * Navigate to the "API keys" tab in your user dashboard.
     * Copy the key. You'll need it during the configuration step. **Note:** It can take up to an hour for a new API key to become active.
 
-Once you have the hardware and have signed up for the necessary accounts, you're ready to move on to the next step.
+## Installation
 
+Once you have the free account set up, running this project is as simple as deploying it to a balenaCloud fleet. The basic premise is that you add a fleet, add your device (or devices - you can have more than one device running the same code!), and then deploy software. You can do it in just a few clicks by using the button below which will automatically guide you through adding your first fleet and deploying the code.
+
+[![balena deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/bonstio/weather-display&defaultDeviceType=raspberry-pi)
+
+Once your SD card has been flashed, set it aside as we'll need it later after we have assembled the hardware.
+
+To update at a later date, simply return to this page and click the above button again to deploy the latest code to your existing fleet. Your device will automatically update over-the-air!
+
+**Alternatively**, sign up, add a fleet and device as per the [getting started](https://www.balena.io/docs/learn/getting-started/raspberrypi3/python/) guide. Then use the [balena CLI](https://github.com/balena-io/balena-cli) to push the project to your Pi.
+
+This allows you to easily deploy multiple devices and configure them from the dashboard with the following variables.
 **Next Step**: [Connecting the display to the Pi &rarr;](/docs/02-connecting-the-display-to-the-pi.md)

@@ -1,6 +1,6 @@
 ![](assets/full-logo.png)
 
-**A real-time, miniature weather display based upon a Raspberry Pi Zero and 256x64 SPI OLED display(s). Uses the publicly available [OpenWeatherMap One Call API](https://openweathermap.org/api/one-call-api). This project was MASSIVELY inspired by [chrisys](https://github.com/chrisys)'s [Train Departure Display](https://github.com/chrisys/train-departure-displa) project **
+**A real-time, miniature weather display based upon a Raspberry Pi / Zero and 256x64 SPI OLED display(s). Uses the publicly available [OpenWeatherMap One Call API](https://openweathermap.org/api/one-call-api). This project was MASSIVELY inspired by [chrisys](https://github.com/chrisys)'s [Train Departure Display](https://github.com/chrisys/train-departure-displa) project **
 
 ## Highlights
 
