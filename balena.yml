@@ -42,7 +42,7 @@ assets:
     type: blob.asset
     data:
       url: >-
-        https://github.com/bonstio/weather-display/blob/main/assets/logo.png
+        https://raw.githubusercontent.com/bonstio/weather-display/master/assets/logo.png
 data:
   defaultDeviceType: raspberry-pi
   supportedDeviceTypes:
